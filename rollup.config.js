@@ -3,7 +3,6 @@ import resolve from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
 import livereload from 'rollup-plugin-livereload';
 import autoPreprocess from 'svelte-preprocess';
-import json from 'rollup-plugin-json';
 import { terser } from 'rollup-plugin-terser';
 
 const production = !process.env.ROLLUP_WATCH;
@@ -17,15 +16,6 @@ export default {
 		file: 'public/build/bundle.js'
 	},
 	plugins: [
-		json({
-			include: 'node_modules/**',
-			exclude: [ 'node_modules/foo/**', 'node_modules/bar/**' ],
-
-			preferConst: true, 
-			indent: '  ',
-			compact: true, // Default: false
-			namedExports: true // Default: true
-			}),
 		svelte({
 			// enable run-time checks when not in production
 			dev: !production,
