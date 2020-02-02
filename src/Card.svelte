@@ -108,13 +108,18 @@ img {
 </style>
 
 
-  <div class="heart__item">
-    <div class="heart__face heart__face--front">
-      <div class="heart__image-wrapper">
-        <img src="{cardData.image}" alt="Jane Doe Profile" class="heart__image">
-      </div>
-      <span class="heart__name">{cardData.name}</span>
-      <button class="heart__button">{cardData.buttonText}</button>
+<div class="heart__item {cardData.hidden ? 'heart__item--hidden' : ''}" data-role="{cardData.frontFace ? cardData.frontFace.role : ''}">
+{#if cardData.frontFace}
+  <div class="heart__face heart__face--front">
+    <div class="heart__image-wrapper">
+      <img src="{cardData.frontFace.image}" alt="Jane Doe Profile" class="heart__image">
     </div>
-    <div class="heart__face heart__face--back">{cardData.back}</div>
+    <span class="heart__name">{cardData.frontFace.name}</span>
+    <button class="heart__button">{cardData.frontFace.buttonText}</button>
   </div>
+{/if}
+
+{#if cardData.backFace}
+  <div class="heart__face heart__face--back"></div>
+{/if}
+</div>
