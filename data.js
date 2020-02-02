@@ -1,4 +1,5 @@
-{ hidden: true },
+export default [
+    { hidden: true },
 {
   frontFace: {
     name: 'Alex Clapperton',
@@ -484,3 +485,4 @@
 { hidden: true },
 { hidden: true },
 { hidden: true }
+]
