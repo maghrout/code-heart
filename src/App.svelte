@@ -40,7 +40,7 @@
 
 	main {
 		display: flex;
-		flex-direction: row;
+		flex-direction: column;
 		justify-content: space-around;
 		align-items: center;
 		min-height: 100vh;
@@ -57,8 +57,8 @@
 	.heart {
 		display: grid;
 		grid-gap: 10px;
-		grid-template-columns: repeat(9, 5em);
-		grid-template-rows: repeat(8, 5.7em);
+		grid-template-columns: repeat(11, 5em);
+		grid-template-rows: repeat(11, 5.7em);
 	}
 
 	:global(.disabled) {
@@ -67,9 +67,9 @@
 
 	.button-container {
 		display: grid;
-		grid-template-columns: 1fr;
+		grid-template-rows: 1fr;
     	grid-column-gap: 10px;
-		grid-template-rows: repeat(8, 1fr);
+		grid-template-columns: repeat(8, 1fr);
 		margin-bottom: 20px;
 	}
 
