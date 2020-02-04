@@ -70,7 +70,7 @@
 		grid-template-rows: 1fr;
     	grid-column-gap: 10px;
 		grid-template-columns: repeat(8, 1fr);
-		margin-bottom: 20px;
+		margin: 20px 0;
 	}
 
 	:global(.button) {
